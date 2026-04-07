@@ -913,6 +913,54 @@
                 display: none; /* Hide in header on very small screens to save space */
             }
         }
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            color: var(--sage-dark);
+            transform: translateY(-2px);
+        }
+
+        .header-social {
+            margin-right: 15px;
+            color: var(--olive);
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .header-social:hover {
+            color: var(--sage-dark);
+            transform: scale(1.1);
+        }
+
+        .about-social {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--olive);
+            font-weight: 500;
+        }
+
+        @media (max-width: 992px) {
+            .header-social {
+                margin-right: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-social {
+                display: none; /* Hide in header on mobile if it gets too crowded, or keep it if space allows */
+            }
+        }
     </style>
 </head>
 <body>
@@ -932,6 +980,9 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <a href="https://www.instagram.com/lunaferreiranutri/" target="_blank" class="header-social" title="Siga no Instagram">
+            <i data-lucide="instagram" size="20"></i>
+        </a>
         <a href="https://wa.me/5521992114665?text=Olá, Dra. Luna! Vi seu site e quero agendar minha consulta nutricional." target="_blank" class="btn-header">Agendar Consulta</a>
     </header>
 
@@ -957,7 +1008,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="/public/file_00000000fb2c71f59d52f010bd10bcee.png" alt="Dra. Luna Passeri Ferreira" referrerPolicy="no-referrer">
+                <img src="public/file_00000000fb2c71f59d52f010bd10bcee.png" alt="Dra. Luna Passeri Ferreira" referrerPolicy="no-referrer">
             </div>
         </div>
     </section>
@@ -1199,15 +1250,18 @@
     <section id="sobre" class="about">
         <div class="container flex-container about-flex">
             <div class="about-image">
-                <img src="/public/file_000000000710720e8a16ce9dae456c72.png" alt="Dra. Luna Passeri">
+                <img src="public/file_000000000710720e8a16ce9dae456c72.png" alt="Dra. Luna Passeri">
             </div>
             <div class="about-content">
                 <h2 style="font-size: 3rem;">Dra. Luna Passeri Ferreira</h2>
                 <p>Sou Nutricionista Clínica, Mestre em Diabetes pela UFF e apaixonada por transformar vidas através de uma alimentação que faz sentido.</p>
                 <p>Minha formação anterior em Gastronomia me permite unir o rigor da ciência com o prazer de estar na cozinha. Acredito que a nutrição não deve ser um peso, mas uma ferramenta de liberdade.</p>
                 <p>Meu foco é ajudar pessoas com diabetes e doenças crônicas a recuperarem a autonomia, controlarem seus exames e viverem com leveza, sem dietas impossíveis ou terrorismo nutricional.</p>
-                <div style="margin-top: 30px;">
+                <div style="margin-top: 30px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
                     <a href="https://wa.me/5521992114665?text=Olá, Dra. Luna! Vi seu site e gostaria de tirar uma dúvida sobre o atendimento." target="_blank" class="btn-secondary">Falar com a Dra. Luna</a>
+                    <a href="https://www.instagram.com/lunaferreiranutri/" target="_blank" class="social-link" style="font-weight: 500; color: var(--olive);">
+                        <i data-lucide="instagram" size="18"></i> Siga no Instagram
+                    </a>
                 </div>
             </div>
         </div>
@@ -1291,6 +1345,11 @@
             <a href="https://wa.me/5521992114665?text=Olá, Dra. Luna! Vi seu site e quero começar meu acompanhamento." target="_blank" class="btn-primary" style="background: var(--accent-green); color: var(--olive); font-size: 1.2rem; padding: 20px 50px;">
                 Quero agendar agora
             </a>
+            <div style="margin-top: 25px;">
+                <a href="https://www.instagram.com/lunaferreiranutri/" target="_blank" class="social-link" style="color: var(--white); opacity: 0.9;">
+                    <i data-lucide="instagram" size="20"></i> Acompanhe dicas diárias no Instagram
+                </a>
+            </div>
         </div>
     </section>
 
@@ -1315,8 +1374,8 @@
                 <div class="footer-col">
                     <h4>Contato</h4>
                     <ul class="footer-links">
-                        <li><i data-lucide="phone" size="14"></i> (21) 99211-4665</li>
-                        <li><i data-lucide="instagram" size="14"></i> @lunaferreiranutri</li>
+                        <li><a href="tel:+5521992114665" class="social-link"><i data-lucide="phone" size="14"></i> (21) 99211-4665</a></li>
+                        <li><a href="https://www.instagram.com/lunaferreiranutri/" target="_blank" class="social-link"><i data-lucide="instagram" size="14"></i> Instagram</a></li>
                         <li><i data-lucide="map-pin" size="14"></i> Barra da Tijuca, RJ</li>
                     </ul>
                 </div>
